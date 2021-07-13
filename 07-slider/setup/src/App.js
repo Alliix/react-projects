@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
-import { FaQuoteRight } from 'react-icons/fa';
-import data from './data';
+import React from "react";
+import Reviews from "./Reviews";
+
 function App() {
-  return <h2>slider project setup</h2>;
+  return (
+    <section className="section">
+      <div className="title">
+        <h2>
+          <span>/</span>reviews
+        </h2>
+      </div>
+      <Reviews />
+    </section>
+  );
 }
 
 export default App;
