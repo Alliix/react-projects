@@ -8,8 +8,8 @@ const List = ({ people }) => {
         return <article key={id} className="person">
           <img src={image} alt={name}></img>
           <div>
-            <h4>{name}</h4>
-            <p>{age} years</p>
+            <h4 data-testid='name-heading'>{name}</h4>
+            <p data-testid='age'>{age} years</p>
           </div>
         </article>
       })}
