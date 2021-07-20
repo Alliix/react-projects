@@ -4,6 +4,7 @@ import Tours from "./Tours";
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
 const url = "https://course-api.com/react-tours-project";
+const fetch = require("node-fetch");
 function App() {
   const [loading, setLoading] = useState(true);
   const [tours, setTours] = useState([]);
@@ -16,8 +17,7 @@ function App() {
   const fetchTours = async () => {
     setLoading(true);
     try {
-      let headers = new Headers();
-      headers.append("Access-Control-Allow-Origin", "http://localhost:3000");
+      let headers = {"Access-Control-Allow-Origin": "http://localhost:3000"};
       const tours = await fetch(url, { headers: headers }).then((res) =>
         res.json()
       );
@@ -43,7 +43,7 @@ function App() {
   if (tours.length === 0) {
     return (
       <>
-        <h4>no tours</h4>
+        <h4 data-testid="test" className="notours">no tours</h4>
         <button className="btn" onClick={() => fetchTours()}>
           Get tours
         </button>
