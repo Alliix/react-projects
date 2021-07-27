@@ -21,13 +21,13 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} alt="stripe" className="nav-logo" />
-          <button className="btn toggle-btn" onClick={openSidebar}>
+          <button data-testid="sidebar-btn" className="btn toggle-btn" onClick={openSidebar}>
             <FaBars />
           </button>
         </div>
         <ul className="nav-links">
           <li className="link-btn">
-            <button className="link-btn" onMouseOver={displaySubmenu}>
+            <button data-testid="nav-products" className="link-btn" onMouseOver={displaySubmenu}>
               products
             </button>
           </li>

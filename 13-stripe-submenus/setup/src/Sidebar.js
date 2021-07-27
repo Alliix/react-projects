@@ -7,10 +7,11 @@ const Sidebar = () => {
   const { closeSidebar, isSidebarOpen } = useGlobalContext();
   return (
     <aside
+      data-testid="sidebar"
       className={isSidebarOpen ? "sidebar-wrapper show" : "sidebar-wrapper"}
     >
       <div className="sidebar">
-        <button className="close-btn" onClick={closeSidebar}>
+        <button className="close-btn" data-testid="sidebar-close-btn" onClick={closeSidebar}>
           <FaTimes />
         </button>
         <div className="sidebar-links">
